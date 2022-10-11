@@ -1,4 +1,9 @@
 <!-- App: c'est la racine; la où la structure va apparaitre -->
+
+<div class="header">
+  <h1>Wad22 - Angular</h1>
+</div>
+
 <!-- Navigation -->
 <!-- <nav>
   <ul>
@@ -18,7 +23,10 @@
     </li>
   </ul>
 </nav> -->
-<app-nav></app-nav>
+
+<div class="nav">
+  <app-nav></app-nav>
+</div>
 
 <!-- Content -->
 <!-- définition manuelle du contenu
@@ -26,6 +34,8 @@
 <app-about></app-about> -->
 
 <!-- en fonction du routing on peut afficher le composent que l'on souhaite de façon automatique -->
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 <!-- Footer -->

@@ -1,0 +1,20 @@
+<h4>Demo 4: Attribute Binding</h4>
+
+<input type="number" [(ngModel)]="myNumber" />
+
+<br />
+
+<p><input type="checkbox" [(ngModel)]="bool" />Désactiver le bouton</p>
+
+<br />
+
+<button disabled="true">Clique sur moi</button>
+<button [disabled]="bool">Clique sur moi</button>
+<button [disabled]="myNumber < 5">Clique sur moi</button>
+
+<p>
+  <a href="https://github.com/QuentinGeerts/wad22-angular/" target="_blank"
+    >Aller sur le repo git</a
+  >
+</p>
+<img [src]="imgSrc" [alt]="imgAlt" width="150px" />
