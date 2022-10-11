@@ -1,1 +1,14 @@
-<p>exo1 works!</p>
+<h2>Exercice du chronomètre</h2>
+
+<div>
+    <p>3 boutons: Start, Pause, Reset (actif/inactif en fonction des besoins)</p>
+    <p>Affichage "xx minutes xx secondes"</p>
+    <p>Astuce: cherchez du côté de setInterval() et du string Interpolation de Typescript</p>
+</div>
+
+<p>Temps écoulé: {{ time | toTime }}</p>
+<!-- <p>{{ time | toMinute }} minutes {{ time | toSeconde }}</p> -->
+<!-- vérifier si le timer existe juste en mettant timer et s'il n'existe pas en faisant !null-->
+<button (click)="start()" [disabled] = "timer">Start</button>
+<button (click)="pause()" [disabled] = "!timer">Pause</button>
+<button (click)="reset()" [disabled] = "!time">Reset</button>
