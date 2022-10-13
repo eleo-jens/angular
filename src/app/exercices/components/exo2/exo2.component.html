@@ -1,1 +1,11 @@
-<p>exo2 works!</p>
+<h3>Shopping List</h3>
+
+<p>Insérez un produit à ajouter: </p>
+<input type="text" [(ngModel)]="article"/>
+<button (click)="Ajouter()">Ajouter</button>
+
+<app-liste 
+    [panier]="liste"
+    (delete)="Remove($event)"
+>
+</app-liste>

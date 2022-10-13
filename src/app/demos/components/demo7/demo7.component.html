@@ -1,0 +1,54 @@
+<h3>Demo 7: Structural Directive</h3>
+
+<hr>
+
+<h4>NgIf</h4>
+
+<div (click)="toggle()">
+    <p style="cursor:pointer">
+        Clique sur moi ({{ isToggled }})
+    </p>
+</div>
+
+<div *ngIf="isToggled; then thenblock else elseblock">
+</div>
+
+<!-- le contenu du ng-template vient completement remplacer la div ci-dessous -->
+<ng-template #thenblock>
+    <div>
+        <p>
+                Contenu si la condition est vraie.
+        </p>
+    </div>
+</ng-template>
+
+<ng-template #elseblock>
+    <div>
+        <p>
+                Autre contenu si la condition est fausse.
+        </p>
+    </div>
+</ng-template>
+
+<h4>NgIf</h4>
+
+<ul>
+    <li *ngFor="let fruit of liste; let i = index">
+        {{ i }} - {{ fruit }}
+    </li>
+</ul>
+
+<h4>NgSwitch</h4>
+
+<br>
+
+<input type="text" [(ngModel)]="inputValue">
+
+<!-- Pas fort utilisé -->
+<div [ngSwitch]="inputValue">
+    <p *ngSwitchCase="1">Pomme</p> 
+    <p *ngSwitchCase="2">Poire</p>
+    <p *ngSwitchCase="3">Pêche</p>
+    <p *ngSwitchDefault>Entrez 1, 2 ou 3</p>
+</div>
+

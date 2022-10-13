@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exo2Component implements OnInit {
 
+  article!: string;
+  liste!: string[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.article = "Un produit";
+    this.liste = [ 'souris', 'clavier' ];
+  }
+
+  Ajouter() {
+    this.liste.push(this.article);
+    this.article = "";
+  }
+
+  Remove(index: number): void {
+    this.liste.splice(index, 1);
   }
 
 }

@@ -13,12 +13,16 @@ italic!: boolean;
 bold!: boolean;
 size!: boolean;
 
+isActive!: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
     this.italic = false;
     this.bold = false; 
     this.size = false; 
+
+    this.isActive = false;
 
     this.setCurrentStyle();
 
@@ -45,6 +49,10 @@ size!: boolean;
   switchSize() {
     this.size = !this.size;
     this.setCurrentStyle();
+  }
+
+  switchClass() {
+    this.isActive = !this.isActive;
   }
 
 

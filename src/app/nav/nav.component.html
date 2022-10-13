@@ -1,5 +1,20 @@
 <nav>
   <ul>
+    <li *ngFor="let link of LinkList; let i = index">
+      <a routerLink={{link.url}} (click)="toggleVisible(i)" routerLinkActive="activeRoute" [ngClass]="{master : link.children}">{{ link.title }}</a>
+        
+        <ul *ngIf="link.children && link.isVisible">
+          <li *ngFor="let enfant of link.children; let i = index">
+            <a [routerLink]="enfant.url" routerLinkActive="activeRoute">{{ i + 1 }} - {{ enfant.title }}</a>
+          </li>
+        </ul>
+
+    </li>
+  </ul>
+</nav>
+
+<!-- <nav>
+  <ul>
     <li><a routerLink="home" routerLinkActive="activeRoute">Accueil</a></li>
     <li><a routerLink="about" routerLinkActive="activeRoute">A propos</a></li>
     <li>
@@ -11,6 +26,7 @@
         <li><a routerLink="demos/demo4" routerLinkActive="activeRoute">Demo 4</a></li>
         <li><a routerLink="demos/demo5" routerLinkActive="activeRoute">Demo 5</a></li>
         <li><a routerLink="demos/demo6" routerLinkActive="activeRoute">Demo 6</a></li>
+        <li><a routerLink="demos/demo7" routerLinkActive="activeRoute">Demo 7</a></li>
       </ul>
     </li>
     <li>
@@ -21,6 +37,6 @@
       </ul>
     </li>
   </ul>
-</nav>
+</nav> -->
 
 <!-- <router-outlet></router-outlet> -->

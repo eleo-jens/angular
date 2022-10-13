@@ -19,3 +19,7 @@ ul li a:hover{
 ul li a.activeRoute {
     color: magenta;
 }
+
+.master{
+    font-weight: bold;
+}

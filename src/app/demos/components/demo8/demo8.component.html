@@ -1,0 +1,13 @@
+<h3>Demo 8: @Input/ @Output</h3>
+
+<div>
+    <p>Contenu du composant parent</p>
+    <p>Message provenant de l'enfant: {{ messageFromChildren }}</p>
+</div>
+
+<app-enfant 
+title="Titre du composant enfant" 
+[messageFromParent]="messageFromParent"
+(event)="reactToChildren($event)">
+    <p style="color: red">Contenu de l'enfant définit directement dans l'appel du parent avec app-enfant dans le parent et ng-content dans l'enfant</p>
+</app-enfant>
